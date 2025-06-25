@@ -1,34 +1,33 @@
-/* Styl nowoczesny NEGATYW - dark mode / neo dark UI */
+/* Jasny, nowoczesny, zaokrąglony UI (ładniejszy niż Google 😉) */
 
 :root {
-  --bg-dark: #121212;
-  --bg-card: #1e1e1e;
-  --text-light: #f5f5f5;
-  --text-muted: #a0a0a0;
-  --accent: #4dabf7;
-  --accent-hover: #339af0;
-  --radius: 12px;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --font-main: 'Inter', sans-serif;
+  --bg-light: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --radius: 16px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --font-main: 'Inter', 'Segoe UI', sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-main);
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  line-height: 1.6;
   padding: 2rem;
+  background-color: var(--bg-light);
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
-  color: var(--text-light);
-  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
 p {
   color: var(--text-muted);
-  margin-bottom: 1rem;
 }
 
 .card {
@@ -36,16 +35,17 @@ p {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 2rem;
-  margin: 1rem 0;
-  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .button {
+  display: inline-block;
   background-color: var(--accent);
   color: white;
   border: none;
@@ -53,20 +53,22 @@ p {
   border-radius: var(--radius);
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .button:hover {
   background-color: var(--accent-hover);
+  transform: scale(1.03);
 }
 
 input, textarea {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  color: var(--text-light);
+  background-color: white;
+  border: 1px solid #ddd;
   border-radius: var(--radius);
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   width: 100%;
+  font-size: 1rem;
+  color: var(--text-dark);
   margin-bottom: 1rem;
   transition: border 0.2s ease;
 }
@@ -74,4 +76,5 @@ input, textarea {
 input:focus, textarea:focus {
   border-color: var(--accent);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
